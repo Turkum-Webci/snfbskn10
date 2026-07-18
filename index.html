@@ -142,6 +142,30 @@ background-repeat: no-repeat;
             font-weight: bold;
             font-style: italic;
         }
+        .maviv{
+            background-color: rgb(0, 247, 255);
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+            font-style: italic;
+        }
+        .kirmiv{
+            background-color: rgb(255, 0, 0);
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+            font-style: italic;
+        }
+        .yesilv{
+            background-color: rgb(64, 255, 0);
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+            font-style: italic;
+        }
+        .siyahv{
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            font-style: italic;
+        }
     </style>
     <script>
         //var random = Math.random();
@@ -160,8 +184,8 @@ background-repeat: no-repeat;
         //alert("2000 satır kod olduğundan dolayı. şuan tam 2314 satır kod. 2500 satırdan sonraya kadar bu duracak :) ufak bir paket kodu verelim kutlamak için: it234pkt11.İyi oynamalar oynayan kişi :) nasiplisin çünkü %20 olasılıkla bu yazı çıkıyor.");
         //}bu da bitti sıradaki 3000 :) ve elhamdürillah başardım.
         var random = Math.random();
-        if(random <= 0){ // imkansız olsun diye tekrar kopyalaması kolay olsun diye .d 3500 satırı geçtik ondan.
-        alert("3000 satır kod olduğundan dolayı. şuan tam 3651 satır kod. 3500 satırdan sonraya kadar bu duracak :) ufak bir paket kodu verelim kutlamak için: it234pkt11.İyi oynamalar oynayan kişi :) nasiplisin çünkü %5 olasılıkla bu yazı çıkıyor.");
+        if(random <= 0.02){
+        alert("4000 satır kod olduğundan dolayı. şuan tam 4013 satır kod. 4500 satırdan sonraya kadar bu duracak :) ufak bir paket kodu verelim kutlamak için: it234pkt11.İyi oynamalar oynayan kişi :) nasiplisin çünkü %2 olasılıkla bu yazı çıkıyor."); //eskiden %20 idi şuan 2 kat azaldı ve %2'ye düştü .d
         }
     </script>
 </head>
@@ -219,6 +243,21 @@ background-repeat: no-repeat;
 <option value="sodyum" id="sodyum" title="ALMA SAKIN.. SAKIN, SAKIN ALMA!">Sodyum Metali</option>
         </select>
         <button onclick="DAL()" id="buttoncss">D şubesinden al</button> <br>
+        <select name="" id="vali" title="Kırmızılar tehlikeli,Maviler daha güvenli,Yeşiller uslu,Siyahlar sana karşı olabileceklerdir.">
+<option value="kerem" class="maviv">Kerem</option>
+<option value="omera" class="siyahv">Ömer Asaf</option>
+<option value="mahmut" class="maviv">Mahmut</option>
+<option value="yagiz" class="maviv">Yağız</option>
+<option value="furkan" class="kirmiv">Furkan</option>
+<option value="arda" class="kirmiv">Arda</option>
+<option value="omerk" class="maviv">Ömer Kürşat</option>
+<option value="ahmetb" class="maviv">Ahmet Burak</option>
+<option value="oguz" class="yesilv">Oğuz</option>
+<option value="eymens" class="maviv">3 Eymen'den biri.</option>
+<option value="alik" class="kirmiv">Ali Kemal</option>
+<option value="emin" class="yesilv">Muhammed Emin</option>
+        </select>
+        <button onclick="VALI()" id="buttoncss">Bu Kişiyi Vali seç.</button> <br> <!--Eğer geliştireceksen valinin isyanı,valiyi kaldırma,valinin şikayet edilmesi falan ekle.-->
         <button onclick="PRGL()" id="buttoncss">Pergelli Akıncılarını A şubesine gönder (akıncı paketin yoksa gönderemezsin ve minimum 20 itibar ile minimum 60 oy gerekir,-20 hocalarla anlaşma ama -3 A şubesinin gücü,+400 puan)</button> <br>
         <button onclick="AKAC1()" id="buttoncss">A şubesine ambargo koy (-4 oy, +3 itibar, -12% hocalarla anlaşma, -3 A güç,-800 para)</button> <br>
         <button onclick="AKAC2()" id="buttoncss">D şubesini öv (-2 oy, +1 D şubesi ile anlaşma)</button> <br>
@@ -541,6 +580,7 @@ background-repeat: no-repeat;
     var aa = 22;
     var gun = date.getDay();
     var ay = date.getMonth();
+    var valis = 0;
     var yil = date.getFullYear();
     var saat = date.getHours();
     var dakika = date.getMinutes();
@@ -625,7 +665,7 @@ if(random6 > 0.6){
 }
         }
     }, 180000);
-    function PRGL1(){
+    function PRGL2(){
         if(rndm3 < rmmr1 && it > 49){
             alert("Gizli Son:Pergelli Akıncılarını Kaldıran. Paket Kodu:akin1595.Daha iyi kullanırsın :). Ek olarak sonrasında askerler yetiştirip D şubesinden eğitim aldırttın ve yeni ordu kurdun.A şubesinin gücünüde o paket ile azaltırsın yani :) Ek olarak tebrik ederim çok şanslıydın maşAllah.");
             window.location.href = location.href;
@@ -909,18 +949,18 @@ eskiktp = ktpicrk;
         document.getElementById("it").textContent = it;
         }
         else if(ktpicrk.length >= 1000 && ktpicrk.length < 3000){
-            hi += 20;
-        it += 18;
-        oy += 40;
+            hi += 12;
+        it += 6;
+        oy += 10;
         document.getElementById("okcvp").textContent = "Ömer Kürşat: Seni Tebrik ederim.";
         document.getElementById("oy").textContent = oy + "%";
         document.getElementById("hi").textContent = hi + "%";
         document.getElementById("it").textContent = it;
         }
         else if(ktpicrk.length >= 3000){
-            hi += Math.floor(ktpicrk.length / 100);
-        it += Math.floor(ktpicrk.length / 200);
-        oy += Math.floor(ktpicrk.length / 80);
+            hi += 15 + Math.floor(ktpicrk.length / 7500);
+        it += 9 + Math.floor(ktpicrk.length / 10000);
+        oy += 13 + Math.floor(ktpicrk.length / 8000);
         document.getElementById("ocvp").textContent = "Ömer Asaf: Seni Tebrik ederim Huzeyfe.. ";
         document.getElementById("oy").textContent = oy + "%";
         document.getElementById("hi").textContent = hi + "%";
@@ -1129,9 +1169,11 @@ alert("Paket kodu: sgnk2026 ama zaten bulmuştursun .d");
     function ATLY(){
         var tiklama = new Audio("tiklama.mp3");
 tiklama.play();
+if(atly == "yk" && pr1 >= 5000){
         atly = "evt";
         pr1 -= 5000;
         document.getElementById("pr").innerHTML = pr1;
+}
     }
     function OYNYP(){
         var tiklama = new Audio("tiklama.mp3");
@@ -1629,6 +1671,139 @@ rbdym = "evt";
             document.getElementById("it").innerHTML = it;
             document.getElementById("pr").innerHTML = "Para: " + pr1;
         }
+    }
+    function VALI(){
+        var tiklama = new Audio("tiklama.mp3");
+tiklama.play();
+if(valis < 3){
+    valis++;
+        if (document.getElementById("vali").value == "kerem"){
+            hi += 5;
+            oy += 3;
+            it += 2;
+            ki += 5;
+            document.getElementById("hi").innerHTML = hi + "%";
+            document.getElementById("oy").innerHTML = oy + "%";
+            document.getElementById("it").innerHTML = it;
+            document.getElementById("kcvp").innerHTML = "Kerem: Sağol Huzeyfe :)";
+            document.getElementById("ka").innerHTML = ki;
+        }
+        else if (document.getElementById("vali").value == "omera"){
+            hi += 4;
+            oy -= 2;
+            it -= 2;
+            öi += 5;
+            document.getElementById("hi").innerHTML = hi + "%";
+            document.getElementById("oy").innerHTML = oy + "%";
+            document.getElementById("it").innerHTML = it;
+            document.getElementById("ocvp").innerHTML = "Ömer Asaf: Sağol eski düşman :)";
+            document.getElementById("oa").innerHTML = öi;
+        }
+        else if (document.getElementById("vali").value == "mahmut"){
+            hi += 8;
+            oy += 5;
+            it += 2;
+            mi += 5;
+            document.getElementById("hi").innerHTML = hi + "%";
+            document.getElementById("oy").innerHTML = oy + "%";
+            document.getElementById("it").innerHTML = it;
+            document.getElementById("mcvp").innerHTML = "Mahmut: Sağol Huzeyfe :)";
+            document.getElementById("ma").innerHTML = mi;
+        }
+        else if (document.getElementById("vali").value == "yagiz"){
+            hi += 3;
+            oy += 6;
+            it += 3;
+            yi += 5;
+            document.getElementById("hi").innerHTML = hi + "%";
+            document.getElementById("oy").innerHTML = oy + "%";
+            document.getElementById("it").innerHTML = it;
+            document.getElementById("ycvp").innerHTML = "Yağız: Thanks Huzeyfe :)";
+            document.getElementById("ya").innerHTML = yi;
+        }
+        else if (document.getElementById("vali").value == "furkan"){
+            hi -= 9;
+            oy += 8;
+            it -= 6;
+            fa += 3;
+            document.getElementById("hi").innerHTML = hi + "%";
+            document.getElementById("oy").innerHTML = oy + "%";
+            document.getElementById("it").innerHTML = it;
+            document.getElementById("fcvp").innerHTML = "Furkan: Tamam huzeyfe";
+            document.getElementById("fa").innerHTML = fa;
+        }
+        else if (document.getElementById("vali").value == "arda"){
+            hi -= 6;
+            oy += 3;
+            it += 2;
+            aa += 4;
+            document.getElementById("hi").innerHTML = hi + "%";
+            document.getElementById("oy").innerHTML = oy + "%";
+            document.getElementById("it").innerHTML = it;
+            document.getElementById("arcvp").innerHTML = "Arda: Sağol Huzeyfe :)";
+            document.getElementById("aa").innerHTML = aa;
+        }
+        else if (document.getElementById("vali").value == "omerk"){
+            hi += 2;
+            oy += 6;
+            it += 4;
+            oka += 4;
+            document.getElementById("hi").innerHTML = hi + "%";
+            document.getElementById("oy").innerHTML = oy + "%";
+            document.getElementById("it").innerHTML = it;
+            document.getElementById("okcvp").innerHTML = "Ömer Kürşat: Sağol Huzeyfe :)";
+            document.getElementById("oka").innerHTML = oka;
+        }
+        else if (document.getElementById("vali").value == "ahmetb"){
+            hi += 6;
+            oy += 5;
+            it += 3;
+            ki += 3; //Çünkü Kerem ile Ahmet Burak dost.
+            document.getElementById("hi").innerHTML = hi + "%";
+            document.getElementById("oy").innerHTML = oy + "%";
+            document.getElementById("it").innerHTML = it;
+            document.getElementById("ahcvp").innerHTML = "Ahmet Burak: Sağol Huzeyfe :)";
+            document.getElementById("ka").innerHTML = ki;
+        }
+        else if (document.getElementById("vali").value == "alik"){
+            hi -= 9;
+            oy += 6;
+            it += 7;
+            aguc -= 8; //Nedenini biliyorsunuz :)
+            document.getElementById("hi").innerHTML = hi + "%";
+            document.getElementById("oy").innerHTML = oy + "%";
+            document.getElementById("it").innerHTML = it;
+        }
+        else if (document.getElementById("vali").value == "eymens"){
+            hi += 1;
+            oy += 3;
+            it += 2;
+            document.getElementById("hi").innerHTML = hi + "%";
+            document.getElementById("oy").innerHTML = oy + "%";
+            document.getElementById("it").innerHTML = it;
+        }
+        else if (document.getElementById("vali").value == "emin"){
+            hi += 12;
+            oy += 5;
+            it += 7;
+            document.getElementById("hi").innerHTML = hi + "%";
+            document.getElementById("oy").innerHTML = oy + "%";
+            document.getElementById("it").innerHTML = it;
+            //Doğru tercih .d
+        }
+        else if (document.getElementById("vali").value == "oguz"){
+            hi += 10;
+            oy += 7;
+            it += 4;
+            document.getElementById("hi").innerHTML = hi + "%";
+            document.getElementById("oy").innerHTML = oy + "%";
+            document.getElementById("it").innerHTML = it;
+            //İkinci doğru tercih .d
+        }
+    }
+    else{
+        alert("3 Tane vali seçtin ya zaten.");
+    }
     }
     function AKAC1(){
         var tiklama = new Audio("tiklama.mp3");
